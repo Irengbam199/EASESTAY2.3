@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - EaseStay</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Login to EaseStay</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Login Form -->
+    <section>
+        <h2>User Login</h2>
+        <form id="loginForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" required>
+            <br>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" required>
+            <br>
+
+            <button type="submit">Login</button>
+        </form>
+    </section>
+
+    <!-- Rental Listings (Hidden Initially) -->
+    <section id="listings" style="display: none;">
+        <h2>Rental Listings</h2>
+        <p>🏠 2BHK Apartment - ₹10,000/month</p>
+        <p>🏡 3BHK Villa - ₹20,000/month</p>
+        <p>🏢 Studio Apartment - ₹8,000/month</p>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 EaseStay. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Login -->
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent page refresh
+            
+            // Dummy username and password (Change this later)
+            const correctUsername = "admin";
+            const correctPassword = "password123";
+
+            // Get input values
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            // Check login credentials
+            if (username === correctUsername && password === correctPassword) {
+                alert("Login successful!");
+                document.getElementById("listings").style.display = "block"; // Show listings
+                document.getElementById("loginForm").style.display = "none"; // Hide login form
+            } else {
+                alert("Invalid username or password. Try again.");
+            }
+        });
+    </script>
+</body>
+</html>
