@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rental Listings - EaseStay</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Rental Listings</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Listings Section -->
+    <section id="property-listings">
+        <h2>Available Rentals</h2>
+
+        <div class="listing">
+            <img src="images/house1.jpg" alt="2BHK Apartment">
+            <h3>2BHK Apartment</h3>
+            <p>₹10,000/month - Imphal</p>
+        </div>
+
+        <div class="listing">
+            <img src="images/house2.jpg" alt="3BHK Villa">
+            <h3>3BHK Villa</h3>
+            <p>₹20,000/month - Manipur</p>
+        </div>
+
+        <div class="listing">
+            <img src="images/studio.jpg" alt="Studio Apartment">
+            <h3>Studio Apartment</h3>
+            <p>₹8,000/month - Imphal</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 EaseStay. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Prevent unauthorized access
+        if (!localStorage.getItem("username")) {
+            alert("Please log in to view listings.");
+            window.location.href = "login.html";
+        }
+    </script>
+</body>
+</html>
